@@ -1,0 +1,105 @@
+/* Configuración general del tamaño de los elementos */
+* {
+    box-sizing: border-box; /* Incluye el relleno dentro del ancho y alto */
+}
+
+/* Apariencia básica de la página */
+body {
+    margin: 0; /* Quita el margen predeterminado */
+    font-family: Arial, sans-serif; /* Define una letra sencilla */
+    color: #29332d; /* Define el color principal del texto */
+    background: #a1bcec; /* Pone un fondo claro */
+}
+
+/* Contenido que se ve detrás de la ventana emergente */
+.pagina {
+    max-width: 760px; /* Limita el ancho del texto */
+    margin: 80px auto; /* Centra el contenido y deja espacio arriba */
+    padding: 28px; /* Separa el texto de los bordes */
+    background: #fff; /* Da fondo blanco al contenido */
+    border-radius: 12px; /* Redondea las esquinas */
+    line-height: 1.6; /* Mejora la lectura de los párrafos */
+}
+
+.pagina h1 {
+    color: #5696bb; /* Destaca el título en verde */
+}
+
+/* Capa oscura que cubre la pantalla detrás del aviso */
+.fondo-popup {
+    position: fixed; /* Mantiene el fondo fijo en la pantalla */
+    inset: 0; /* Extiende el fondo a todos los bordes */
+    display: flex; /* Permite centrar la ventana */
+    align-items: center; /* Centra la ventana verticalmente */
+    justify-content: center; /* Centra la ventana horizontalmente */
+    padding: 20px; /* Deja espacio en los bordes de pantallas pequeñas */
+    background: rgba(20, 30, 24, 0.55); /* Oscurece el resto de la página */
+    z-index: 10; /* Coloca el aviso por encima del contenido */
+}
+
+/* Caja blanca del consentimiento */
+.popup {
+    width: 100%; /* Usa el espacio disponible en pantallas pequeñas */
+    max-width: 420px; /* Evita que la ventana sea demasiado ancha */
+    padding: 28px; /* Deja espacio dentro de la ventana */
+    text-align: center; /* Centra el texto y el botón */
+    background: #ffffff; /* Pone la caja en blanco */
+    border-radius: 14px; /* Redondea las esquinas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18); /* Añade sombra para separarla del fondo */
+}
+
+.icono-cookie {
+    margin-bottom: 8px; /* Separa el icono del título */
+    font-size: 42px; /* Hace el icono más grande */
+}
+
+.popup h2 {
+    margin: 8px 0 12px; /* Ajusta el espacio alrededor del título */
+    color: #5696bb; /* Usa verde oscuro en el título */
+}
+
+.popup p {
+    margin-bottom: 22px; /* Separa el mensaje del botón */
+    line-height: 1.5; /* Facilita la lectura del mensaje */
+    color: #4d5b52; /* Usa un tono suave para el párrafo */
+}
+
+/* Botón para aceptar el aviso */
+#aceptar-cookies {
+    width: 100%; /* Hace que el botón ocupe el ancho de la caja */
+    padding: 13px 16px; /* Aumenta el área para pulsarlo fácilmente */
+    border: none; /* Quita el borde predeterminado */
+    border-radius: 8px; /* Redondea las esquinas del botón */
+    background: #5696bb; /* Pone el botón en verde */
+    color: #ffffff; /* Hace blanco el texto del botón */
+    font: inherit; /* Usa la misma letra de la página */
+    font-weight: bold; /* Resalta el texto del botón */
+    cursor: pointer; /* Muestra una mano al pasar el cursor */
+}
+
+#aceptar-cookies:hover {
+    background: #5696bb; /* Oscurece el botón al pasar el cursor */
+}
+
+/* Borde visible para quienes navegan con teclado */
+#aceptar-cookies:focus-visible {
+    outline: 3px solid #d18a36; /* Dibuja un borde naranja de enfoque */
+    outline-offset: 3px; /* Separa el borde del botón */
+}
+
+/* Esta clase oculta el aviso cuando JavaScript la agrega */
+.oculto {
+    display: none; /* Quita el popup de la pantalla */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+    .popup {
+        padding: 22px; /* Reduce el espacio interior en celulares */
+    }
+
+    .pagina {
+        margin: 30px 16px; /* Reduce el margen en pantallas pequeñas */
+        padding: 20px; /* Ajusta el relleno del contenido */
+    }
+}

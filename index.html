@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> <!-- Permite mostrar tildes y caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adapta la página a celulares y computadores -->
+    <title>Proyecto 11 - Cookies</title> 
+    <link rel="stylesheet" href="styles.css"> 
+</head> 
+<body> 
+    <main class="pagina"> <!-- Agrupa el contenido principal -->
+        <h1>Bienvenido a nuestra página</h1> <!-- Título principal -->
+        <p>Nos gusta ofrecerte una experiencia sencilla y agradable.</p> <!-- Texto de bienvenida -->
+        <p>Este ejemplo muestra cómo funciona un aviso de consentimiento de cookies.</p> <!-- Explica el propósito de la demostración -->
+    </main> <!-- Cierra el contenido principal -->
+
+    <div class="fondo-popup" id="fondo-popup"> <!-- Fondo que acompaña la ventana emergente -->
+        <section class="popup" role="dialog" aria-labelledby="titulo-popup" aria-describedby="texto-popup"> <!-- Ventana de consentimiento accesible -->
+            <div class="icono-cookie" aria-hidden="true">🍪</div> <!-- Icono decorativo de una galleta -->
+            <h2 id="titulo-popup">Usamos cookies</h2> <!-- Título del aviso -->
+            <p id="texto-popup">Utilizamos cookies para que la página funcione mejor y para mejorar tu experiencia. Puedes aceptar para cerrar este aviso.</p> <!-- Mensaje  -->
+            <button id="aceptar-cookies" type="button">Aceptar y continuar</button> <!-- Botón que acepta y cierra el aviso -->
+        </section> <!-- Cierra la ventana emergente -->
+    </div> <!-- Cierra el fondo del popup -->
+
+    <script src="script.js"></script> 
+</body> 
+</html>
